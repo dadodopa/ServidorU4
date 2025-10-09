@@ -16,8 +16,9 @@ enable_post_data_reading, por defecto está comentada en el fichero php.ini, con
         <title>Exemplo Form Type File</title>
     </head>
     <body>
-        <form action="exemplo.php" enctype="multipart/form-data" method="post">    
-            <input type="file" name="arquivo2" />    
+        <form action="Ejercicio.php" enctype="multipart/form-data" method="POST">    
+            <p>Nombre: <input type="text" name="nombre"></p>
+            <!-- <input type="file" name="arquivo2" />     -->
             <p><input type="submit" value="Submit" /></p>
         </form>
 
