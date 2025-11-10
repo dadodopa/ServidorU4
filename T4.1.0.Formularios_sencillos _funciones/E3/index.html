@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Creación de Contraseña</h1>
+        <form action="index.php" method="post">
+            <label for="min"
+                >Selecciona un minimo para la Contraseña
+                <input type="number" name="min" id="min" min="0"
+            /></label>
+            <label for="max"
+                >y máximo <input type="number" name="max" id="max" min="0"
+            /></label>
+            <br>
+            <label for="tipo">Seleciona tipo de contraseña<select name="tipo" id="tipo">
+                <option value="letters">Solo letras</option>
+                <option value="number">Solo numeros</option>
+                <option value="full">Letras y numeros</option>
+            </select> </label>
+            <br>
+            <button type="submit">Crear contraseña</button>
+        </form>
+    </body>
+</html>
