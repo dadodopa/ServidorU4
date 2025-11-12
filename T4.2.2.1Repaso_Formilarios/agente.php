@@ -2,35 +2,46 @@
 //! COMPROBAR QUE POST NO ESTÉ VACIO
 if (!empty($_POST)) {
     //! FULLNAME
-    echo "<p>El nombre completo es: </p>" . $_POST["fullName"] . "</p>";
+    $fullName = isset($_POST["fullName"]) ? $_POST["fullName"] : " ";
+    echo "<p>El nombre completo es: </p>" . $fullName . "</p>";
     //! USERNAME
-    echo "<p>El nombre de usuario es: " . $_POST["userName"] . "</p>";
+    $userName = isset($_POST["userName"]) ? $_POST["userName"] : " ";
+    echo "<p>El nombre de usuario es: " . $userName . "</p>";
     //! PASSWORD
+    $password = isset($_POST["password"]) ? $_POST["password"] : " ";
     echo "<p>La contraseña es: " . $_POST["password"] . "</p>";
     //! AGE
-    echo "<p>La edad es: " . $_POST["age"] . "</p>";
+    $age = isset($_POST["age"]) ? $_POST["age"] : " ";
+    echo "<p>La edad es: " . $age . "</p>";
     //! BIRTHDAY
-    echo "<p>El cumpleaños es: " . $_POST["birthday"] . "</p>";
+    $birthday = isset($_POST["birthday"]) ? $_POST["birthday"] : " ";
+    echo "<p>El cumpleaños es: " . $birthday . "</p>";
     //! CORREO
-    echo "<p>El correo es: " . $_POST["email"] . "</p>";
+    $email = isset($_POST["email"]) ? $_POST["email"] : " ";
+    echo "<p>El correo es: " . $email . "</p>";
     //! URL
-    echo "<p>La URL personal es: " . $_POST["personalUrl"] . "</p>";
+    $personalUrl = isset($_POST["personalUrl"]) ? $_POST["personalUrl"] : " ";
+    echo "<p>La URL personal es: " . $personalUrl . "</p>";
     //! IP EQUIPO
-    echo "<p>La IP del equipo es: " . $_POST["pcIP"] . "</p>";
+    $pcIP = isset($_POST["pcIP"]) ? $_POST["pcIP"] : " ";
+    echo "<p>La IP del equipo es: " . $pcIP . "</p>";
     //! HOBBIES
     echo "<p>Los hobbies son: " . $_POST["hobbies"] . "</p>";
     //! ACEPTAR INFO
-    if (isset($_POST["acceptInfo"])) {
+    $acceptInfo = isset($_POST["acceptInfo"]) ? $_POST["acceptInfo"] : " ";
+    if (isset($acceptInfo)) {
         echo "<p>Se ha aceptado la información</p>";
     } else echo "<p>Se ha rechazado la información";
     //! SEXO
-    echo "<p>Sexo: " . $_POST["sex"] . "</p>";
+    $sex = isset($_POST["sex"]) ? $_POST["sex"] : " ";
+    echo "<p>Sexo: " . $sex . "</p>";
     //!IDIOMAS
+    $languages = isset($_POST["languages"]) ? $_POST["languages"] : " ";
     echo "Idiomas:";
-    $languages = $_POST["languages"];
     foreach ($languages as $value) {
-        print_r($value." ");
+        print_r($value . " ");
     }
     //!FILE
-    echo "<p>Archivo: ".$_FILES["file"]["name"]."</p>";
+    $file = isset($_FILES["file"]["name"]) ? $_FILES["file"]["name"] : " ";
+    echo "<p>Archivo: " . $file . "</p>";
 }
