@@ -1,8 +1,0 @@
-1. ¿Qué posibles valores tiene el atributo?
-
-2. ¿Cuál es el valor por defecto?
-application/x-www-form
-3. ¿Qué valor soporta el envío de archivos adjuntos?
-4. ¿Qué ocurre si envío un archivo sin utilizar la configuración correcta de enctype?
-5. ¿Puedo recoger los datos de POST usando text/plain en enctype?
-6. ¿Por qué el valor del atributo no afecta a GET?
