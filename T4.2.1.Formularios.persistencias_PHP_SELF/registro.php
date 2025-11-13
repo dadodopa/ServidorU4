@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Registro simple</h1>
+    <form action="PHP_SELF[$_SERVER]" method="post" enctype="multipart/form-data">
+        <p>
+            <label for="fullName">Nombre completo: </label>
+            <input id="fullName" type="text" name="fullName" />
+            <?php
+            
+            if (isset($_POST["fullName"])) {
+                $fullName= $_POST["fullName"];
+                
+            }
+            ?>
+        </p>
+        <p>
+            <label for="userName">Nombre de usuario: </label>
+            <input id="userName" type="text" name="userName" />
+        </p>
+        <p>
+            <label for="password">Contraseña:</label>
+            <input id="password" type="password" name="password" />
+        </p>
+        <p>
+            <label for="age">Edad:</label>
+            <input id="age" type="number" name="age" />
+        </p>
+        <p>
+            <label for="birthday">Dia de nacimiento:</label>
+            <input id="birthday" type="date" name="birthday" />
+        </p>
+        <p>
+            <label for="email">Correo electrónico:</label>
+            <input id="email" type="text" name="email" />
+        </p>
+        <p>
+            <label for="personalUrl">URL personal:</label>
+            <input id="personalUrl" type="text" name="personalUrl" />
+        </p>
+        <p>
+            <label for="pcIP">Ip del equipo:</label>
+            <input id="pcIP" type="text" name="pcIP" />
+        </p>
+        <p>
+            <label for="hobbies">Hobbies:</label><br>
+            <textarea name="hobbies" id="hobbies"></textarea>
+        </p>
+        <p>
+            <label for="acceptInfo">Recibir información</label>
+            <input type="checkbox" name="acceptInfo" id="acceptInfo">
+        </p>
+        <p>
+            <label for="sex">Sexo:</label>
+            <label for="h"><input id="h" value="male" name="sex" type="radio">Hombre</label>
+            <label for="m"><input id="m" value="female" name="sex" type="radio">Mujer</label>
+        </p>
+        <p>
+            <label for="languages">Idiomas</label>
+            <select multiple size="6" name="languages[]" id="languages">
+                <option name="spanish">Español</option>
+                <option name="german">Aleman</option>
+                <option name="danish">Danés</option>
+                <option name="english">Inglés</option>
+                <option name="catalonian">Catalán</option>
+                <option name="esperanto">Esperanto</option>
+            </select>
+        </p>
+        <p>
+            <label for="file">Currículo</label>
+            <input type="file" name="file" id="file">
+        </p>
+        <button type="submit" name="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
